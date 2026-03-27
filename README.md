@@ -29,7 +29,7 @@ Built with MediaPipe + OpenCV + PyAutoGUI.
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/jedi-desktop-controller.git
+git clone https://github.com/kafeellifts/jedi-desktop-controller.git
 cd jedi-desktop-controller
 
 # Create and activate a virtual environment
