@@ -13,18 +13,6 @@ if errorlevel 1 (
     exit /b
 )
 
-:: Warn if Python 3.12+
-for /f "tokens=2 delims= " %%v in ('python --version 2^>^&1') do set PYVER=%%v
-echo Found Python %PYVER%
-echo %PYVER% | findstr /r "^3\.12\." >nul
-if not errorlevel 1 (
-    echo.
-    echo WARNING: Python 3.12 detected. MediaPipe requires Python 3.9-3.11.
-    echo Download Python 3.11 from https://python.org/downloads
-    pause
-    exit /b
-)
-
 echo.
 echo Creating virtual environment...
 python -m venv venv
