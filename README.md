@@ -3,8 +3,8 @@
 Control your entire desktop with hand gestures — no mouse needed.
 Built with MediaPipe + OpenCV + PyAutoGUI.
 
-![Python](https://img.shields.io/badge/Python-3.9--3.11-blue)
-![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10.x-green)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10.21-green)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
 
 ---
@@ -25,18 +25,11 @@ Built with MediaPipe + OpenCV + PyAutoGUI.
 
 ## Setup
 
-**Requirements:** Python 3.9–3.11 (MediaPipe does not support 3.12)
-
 ```bash
-# Clone the repo
 git clone https://github.com/kafeellifts/jedi-desktop-controller.git
 cd jedi-desktop-controller
-
-# Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
@@ -48,13 +41,7 @@ pip install -r requirements.txt
 python hand_tracker.py
 ```
 
-If your webcam isn't detected, run the camera test first to find the right index:
-
-```bash
-python test.py
-```
-
-Then change `camera_id` at the bottom of `hand_tracker.py` to match.
+A camera picker popup will appear — select your webcam and click Start.
 
 ---
 
@@ -65,16 +52,6 @@ Then change `camera_id` at the bottom of `hand_tracker.py` to match.
 - **Hysteresis thresholds** prevent click flickering at the pinch boundary
 - **Gesture confirmation buffer** requires 3 consistent frames before firing
 - **Click FSM** distinguishes single vs double pinch for LMB vs RMB
-
----
-
-## Files
-
-```
-hand_tracker.py   — main controller
-test.py           — camera index finder
-requirements.txt  — dependencies
-```
 
 ---
 
